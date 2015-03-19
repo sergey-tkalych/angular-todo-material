@@ -1,4 +1,5 @@
 <md-whiteframe class="md-whiteframe-z1 todo" layout="row" ng-class="{done: todo.done}">
-	<md-checkbox ng-model="todo.done" aria-label="Done" ng-change="ctrl.doneTodo()"></md-checkbox>
+	<md-checkbox ng-model="todo.done" aria-label="Done" ng-change="ctrl.doneToDo()"></md-checkbox>
 	<h3 ng-bind="todo.text"></h3>
+	<md-button class="md-fab md-fab-top-right todo-remove" ng-click="ctrl.removeToDo(todo)">x</md-button>
 </md-whiteframe>

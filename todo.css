@@ -1,8 +1,14 @@
+body{
+	background: rgba(128, 128, 128, 0.1);
+}
 h1{
 	color: #fff;
 	font-size: 36px;
 	padding: 0;
 	margin: 0;
+}
+#todo{
+	background: transparent;
 }
 form{
 	margin: 20px;
@@ -10,9 +16,14 @@ form{
 .todo{
 	background: #fff;
 	margin: 20px;
-	padding: 20px;
+	padding: 20px 40px 20px 20px;
+	position: relative;
 }
 .todo.done h3{
 	text-decoration: line-through;
 	color: gray;
+}
+.todo .todo-remove{
+	width: 30px;
+	height: 30px;
 }

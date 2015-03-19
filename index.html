@@ -10,9 +10,9 @@
 <body layout="row">
 	<div layout="column" flex>
 		<md-toolbar layout="row" layout-align="center center">
-			<h1>Angular ToDo List</h1>
+			<h1>ToDo List</h1>
 		</md-toolbar>
-		<md-content ng-controller="toDoCtrl as ctrl" class="md-padding">
+		<md-content id="todo" ng-controller="toDoCtrl as ctrl" class="md-padding">
 			<todo-form></todo-form>
 			<todo ng-repeat="todo in ctrl.list track by todo.id"></todo>
 		</md-content>

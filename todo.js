@@ -34,6 +34,16 @@
 					save();
 				}
 
+				function remove(todo){
+					for(var i = 0; i < list.length; i++){
+						if(list[i].id === todo.id){
+							list.splice(i, 1);
+							save();
+							break;
+						}
+					}
+				}
+
 				function save(){
 					localStorage.setItem(Setting.storageKey, JSON.stringify(list));
 				}
@@ -41,7 +51,8 @@
 				return {
 					getList: getList,
 					add: add,
-					done: save
+					done: save,
+					remove: remove
 				}
 			}
 		])
@@ -56,7 +67,9 @@
 					this.todo = defaultToDo();
 				};
 
-				this.doneTodo = ToDo.done;
+				this.doneToDo = ToDo.done;
+
+				this.removeToDo = ToDo.remove;
 
 				function defaultToDo(){
 					return {text: ''};
