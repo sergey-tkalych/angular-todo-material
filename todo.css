@@ -1,0 +1,18 @@
+h1{
+	color: #fff;
+	font-size: 36px;
+	padding: 0;
+	margin: 0;
+}
+form{
+	margin: 20px;
+}
+.todo{
+	background: #fff;
+	margin: 20px;
+	padding: 20px;
+}
+.todo.done h3{
+	text-decoration: line-through;
+	color: gray;
+}
