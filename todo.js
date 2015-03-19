@@ -35,7 +35,7 @@
 				}
 
 				function save(){
-					localStorage.setItem('todoList', JSON.stringify(list));
+					localStorage.setItem(Setting.storageKey, JSON.stringify(list));
 				}
 
 				return {
