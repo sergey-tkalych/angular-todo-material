@@ -10,22 +10,11 @@
 <body layout="row">
 	<div layout="column" flex>
 		<md-toolbar layout="row" layout-align="center center">
-			<h1>ToDo List</h1>
+			<h1>Angular ToDo List</h1>
 		</md-toolbar>
 		<md-content ng-controller="toDoCtrl as ctrl" class="md-padding">
-			<form class="md-padding" ng-submit="ctrl.saveToDo()">
-				<md-input-container flex>
-					<label>ToDo</label>
-					<input ng-model="ctrl.todo.text" required />
-				</md-input-container>
-				<div layout="row" layout-align="end center">
-					<md-button type="submit" class="md-raised md-primary" aria-label="Save">Save</md-button>
-				</div>
-			</form>
-			<md-whiteframe ng-repeat="todo in ctrl.list track by todo.id" class="md-whiteframe-z1 todo" layout="row" ng-class="{done: todo.done}">
-				<md-checkbox ng-model="todo.done" aria-label="Done" ng-change="ctrl.doneTodo()"></md-checkbox>
-				<h3 ng-bind="todo.text"></h3>
-			</md-whiteframe>
+			<todo-form></todo-form>
+			<todo ng-repeat="todo in ctrl.list track by todo.id"></todo>
 		</md-content>
 	</div>
 

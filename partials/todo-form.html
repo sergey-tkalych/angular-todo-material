@@ -1,0 +1,9 @@
+<form class="md-padding" ng-submit="ctrl.saveToDo()">
+	<md-input-container flex>
+		<label>ToDo</label>
+		<input ng-model="ctrl.todo.text" required />
+	</md-input-container>
+	<div layout="row" layout-align="end center">
+		<md-button type="submit" class="md-raised md-primary" aria-label="Save">Save</md-button>
+	</div>
+</form>

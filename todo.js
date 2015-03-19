@@ -62,5 +62,21 @@
 					return {text: ''};
 				}
 			}
-		]);
+		])
+		.directive('todoForm', [
+			function(){
+				return {
+					restrict: 'E',
+					templateUrl: 'partials/todo-form.html'
+				}
+			}
+		])
+		.directive('todo', [
+			function(){
+				return {
+					restrict: 'E',
+					templateUrl: 'partials/todo.html'
+				}
+			}
+		])
 })();
